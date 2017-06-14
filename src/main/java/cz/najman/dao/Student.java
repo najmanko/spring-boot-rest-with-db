@@ -1,4 +1,4 @@
-package hello.dao;
+package cz.najman.dao;
 
 import javax.persistence.*;
 import java.io.Serializable;

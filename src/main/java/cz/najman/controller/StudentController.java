@@ -1,24 +1,20 @@
-package hello;
+package cz.najman.controller;
 
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicLong;
 
-import hello.dao.Student;
+import cz.najman.service.StudentService;
+import cz.najman.dao.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import hello.service.StudentService;
 
 @RestController
-public class GreetingController {
+public class StudentController {
 
     @Autowired
     StudentService studentService;
-
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/list")
     public List<Student> listOfStudents(@RequestParam(value="name", defaultValue="World") String name) {

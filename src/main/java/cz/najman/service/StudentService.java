@@ -1,7 +1,7 @@
-package hello.service;
+package cz.najman.service;
 
-import hello.dao.Student;
-import hello.dao.StudentRepository;
+import cz.najman.dao.Student;
+import cz.najman.dao.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
