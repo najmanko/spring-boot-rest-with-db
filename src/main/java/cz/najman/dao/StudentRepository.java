@@ -8,8 +8,6 @@ public interface StudentRepository extends Repository<Student, Long> {
 
     List<Student> findAll();
 
-    Student findByNameIgnoringCase(String name);
-
     Student save(Student student);
 
 }
