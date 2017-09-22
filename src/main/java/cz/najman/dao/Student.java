@@ -25,10 +25,11 @@ public class Student implements Serializable {
     protected Student() {
     }
 
-    public Student(String name, String surname) {
+    public Student(String name, String surname, int age) {
         super();
         this.name = name;
         this.surname = surname;
+        this.age = age;
     }
 
     public Long getId() {

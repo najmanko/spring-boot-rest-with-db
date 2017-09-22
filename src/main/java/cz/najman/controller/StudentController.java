@@ -22,10 +22,11 @@ public class StudentController {
     }
 
     @RequestMapping("/student")
-    public Student saveStudent(@RequestParam(value="name", defaultValue="Random") String name) {
+    public Student saveStudent(@RequestParam(value="name", defaultValue="Random") String name,
+                               @RequestParam(value="age") int age) {
         Random random = new Random();
         String randomSurname = random.nextInt(100) + "";
-        Student student = studentService.saveStudent(new Student(name, randomSurname));
+        Student student = studentService.saveStudent(new Student(name, randomSurname, age));
         return student;
     }
 }
